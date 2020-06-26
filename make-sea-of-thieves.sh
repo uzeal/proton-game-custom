@@ -13,3 +13,9 @@ popd
 
 #make proton-sot
 build_name=proton-sot make redist | tee build-sot.log
+
+#reset wine
+pushd wine
+git reset --hard HEAD
+git clean -xdf
+popd
